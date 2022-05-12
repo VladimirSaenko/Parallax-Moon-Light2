@@ -1,0 +1,119 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#2b1055, #7597de);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 1000;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#moon {
+    mix-blend-mode: screen;
+}
+
+#mountain_front {
+    z-index: 10;
+}
+
+.title {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    right: -350px;
+    transform: translateY(-75px);
+}
+
+.nextbtn {
+    text-align: center;
+    display: inline-block;
+    padding: 8px 30px;
+    background: #fff;
+    width: 225px;
+    z-index: 9;
+    font-size: 2.5em;
+    border-radius: 40px;
+    transform: translateY(200px);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.nextbtn:hover {
+    background: #7597de;
+    /* color: white; */
+}
+
+.nextbtn:active {
+    background: #2b1055;
+}
+
+.nextbtn:hover a {
+    color: whitesmoke;
+}
+
+.nextbtn a {
+    text-decoration: none;
+    color: #2b1055;
+    cursor: pointer;
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.sec p {
+    font-size: 1.2em;
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+    .title {
+        font-size: 50px;
+    }
+}
